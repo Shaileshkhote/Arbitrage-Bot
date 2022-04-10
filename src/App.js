@@ -16,10 +16,14 @@ function App() {
     
     <Header/>
     <Nav/>
-      <div className="px-2"></div>
+      <div className="pl-8 m-4 flex flex-col mobile:flex-row">
       <Oneinch propsData={tokenData.gmxToken} />
       <Oneinch propsData={tokenData.gmxTokenVice} />
       <Oneinch propsData={tokenData.qiDao} /> 
+      <Oneinch propsData={tokenData.qiDaoVice} /> 
+      <OpenOcean propsData={tokenData.alpacaToken} /> 
+      <OpenOcean propsData={tokenData.alpacaTokenVice} /> 
+      </div>
 
     </>
   )

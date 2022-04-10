@@ -46,7 +46,7 @@ export default function Oneinch(props) {
         <div>
           {' '}
           <div
-            className={` text-white max-w-xs my-auto mx-auto ${bgColor} p-4 py-5 px-5 rounded-xl w-full `}
+            className={` text-white w-60 h-50 my-auto mx-auto ${bgColor} p-4 py-5 px-5 rounded-xl  `}
           >
             <div className="flex flex-row basis-1/2">
               <div>
