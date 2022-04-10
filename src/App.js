@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
+import Avax_Comp from './Components/Avax_Comp'
+import Paraswap from './Components/Paraswap'
+import OpenOcean from './Components/OpenOcean'
+import Menu from './Components/Menu'
+import Oneinch from './Components/Oneinch'
+import {DfkSdk,DfkSdkVice} from './Components/DefiKingdoms'
+import tokenData from './config/tokenConfig'
+import Header from './Components/Header'
+import Nav from './Components/Nav'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    
+    <Header/>
+    <Nav/>
+      <div className="px-2"></div>
+      <Oneinch propsData={tokenData.gmxToken} />
+      <Oneinch propsData={tokenData.gmxTokenVice} />
+      <Oneinch propsData={tokenData.qiDao} /> 
+
+    </>
+  )
 }
 
-export default App;
+export default App
