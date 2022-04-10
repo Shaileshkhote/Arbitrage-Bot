@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import use1inch from '../hooks/use1inch'
 import useBgColor from '../hooks/useBgColor'
 import Skeleton from '@mui/material/Skeleton'
+import sendToBot from '../utils/sendToBot'
 
 export default function Oneinch(props) {
   const [textColor, settextColor] = useState('white')
@@ -33,6 +34,26 @@ export default function Oneinch(props) {
       pricedata2 - parseFloat(props.propsData.amount),
     ).toFixed(5)
   }
+
+  // bot Conditon
+  useEffect(() => {
+    if (priceArb > 5) {
+      console.warn("send to bot")
+      sendToBot(
+        priceArb,
+        props.propsData.srcSymbol,
+        props.propsData.destSymbol,
+        props.propsData.srcChain,
+        props.propsData.destChain,
+        "1inch"
+      );
+    }
+  
+  
+  }, [priceArb])
+  
+  
+  // bot condition over
 
 
   

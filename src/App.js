@@ -16,7 +16,7 @@ function App() {
     
     <Header/>
     <Nav/>
-      <div className="pl-8 m-4 flex flex-col mobile:flex-row">
+      <div className="pl-8 m-4 flex flex-col mobile:flex-row flex-wrap justify-evenly items-center">
       <Oneinch propsData={tokenData.gmxToken} />
       <Oneinch propsData={tokenData.gmxTokenVice} />
       <Oneinch propsData={tokenData.qiDao} /> 

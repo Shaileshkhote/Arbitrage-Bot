@@ -45,7 +45,7 @@ export default function Opencean
               <div>
                 <p className="text-sm font-bold">
                   {' '}
-                  {props.propsData.srcSymbol} Arbitrage{' '}
+                  {props.propsData.srcSymbol} Arb{' '}
                 </p>
                 <p style={{ color: textColor }} className="text-sm">
                   {' '}
