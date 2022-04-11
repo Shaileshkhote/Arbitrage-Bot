@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import sendToBot from '../utils/sendToBot'
 
 export default function Paraswap(props) {
   const [fetchedData, setFetchedData] = useState([])
@@ -70,6 +71,23 @@ useEffect(()=>{
     console.log({textColor})
 
 })
+
+// bot Conditon
+useEffect(() => {
+  if (priceArb > 50) {
+    console.warn("send to bot")
+    sendToBot(
+      priceArb,
+      props.propsData.srcSymbol,
+      props.propsData.destSymbol,
+      props.propsData.srcChain,
+      props.propsData.destChain,
+      "1inch"
+    );
+  }
+}, [priceArb])
+// bot condition over
+
 
   return (
     <>

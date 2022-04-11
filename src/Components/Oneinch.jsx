@@ -37,7 +37,7 @@ export default function Oneinch(props) {
 
   // bot Conditon
   useEffect(() => {
-    if (priceArb > 5) {
+    if (priceArb > 50) {
       console.warn("send to bot")
       sendToBot(
         priceArb,
@@ -48,11 +48,7 @@ export default function Oneinch(props) {
         "1inch"
       );
     }
-  
-  
   }, [priceArb])
-  
-  
   // bot condition over
 
 

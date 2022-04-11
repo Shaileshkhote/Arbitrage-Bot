@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import useOpenOcean from '../hooks/useOpenOcean'
 import useBgColor from '../hooks/useBgColor'
 import Skeleton from '@mui/material/Skeleton'
+import sendToBot from '../utils/sendToBot'
+
 
 export default function Opencean
 (props) {
@@ -32,6 +34,23 @@ export default function Opencean
     5,
   )
 }
+
+// bot Conditon
+useEffect(() => {
+  if (priceArb > 50) {
+    console.warn("send to bot")
+    sendToBot(
+      priceArb,
+      props.propsData.srcSymbol,
+      props.propsData.destSymbol,
+      props.propsData.srcChain,
+      props.propsData.destChain,
+      "1inch"
+    );
+  }
+}, [priceArb])
+// bot condition over
+
   const [bgColor, setbgColor] = useBgColor(priceArb)
   return (
     <>
