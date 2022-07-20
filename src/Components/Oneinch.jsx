@@ -5,6 +5,7 @@ import use1inch from '../hooks/use1inch'
 import useBgColor from '../hooks/useBgColor'
 import Skeleton from '@mui/material/Skeleton'
 import sendToBot from '../utils/sendToBot'
+import useBybit from '../hooks/useBybit'
 
 export default function Oneinch(props) {
   const [textColor, settextColor] = useState('white')
@@ -19,7 +20,14 @@ export default function Oneinch(props) {
     props.propsData.srcDecimals,
   )
 
+  const [pricedata, setpricedata] = useBybit(
+    "GMXUSDT",
+    50,
+    "buy"
+  )
+
   console.log('priceOC', pricedata1)
+  console.log('priceOC', pricedata)
 
   const [pricedata2, setpricedata2] = use1inch(
     props.propsData.destNetwork,

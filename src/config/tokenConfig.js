@@ -152,6 +152,23 @@ const tokenData = {
     destNetwork: '56',
     srcChain: 'fantom',
     destChain: 'bsc',
+  },
+  gOHM: {
+    srcSymbol: 'gOHM',
+    destSymbol: 'USDT',
+    srcAddress: '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
+    destAddress: '0x8D9bA570D6cb60C7e3e0F31343Efe75AB8E65FB1',
+    amount: '9000',
+    srcDecimals: '6',
+    destDecimals: '18',
+    srcDecimals2: '18',
+    destDecimals2: '6',
+    srcAddress2: '0x321E7092a180BB43555132ec53AaA65a5bF84251',
+    destAddress2: '0xc7198437980c041c805A1EDcbA50c1Ce5db95118',
+    network: '42161',
+    destNetwork: '43114',
+    srcChain: 'arbitrum',
+    destChain: 'avax',
   }
 
 }
